@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include("./partials/head.ejs") %>
+<body>
+        <%- include("./partials/navbar.ejs") %>
+        <div class="content">
+            <% if (users.length > 0) { %> 
+                <% users.forEach(user => { %>
+                    <h3 class="title">
+                        <%= user.first_name %>
+                        <%= user.last_name %>
+                    </h3>
+                    <p>
+                        <%= user.email %>
+                    </p>
+                    <% }) %> <% } else { %>
+                        <p>
+                            Não há mais usuários!
+                        </p>
+                        <% } %>
+                        <div class="outro">
+                            ---
+                            <% const oi = "olá, mundo" %>
+                            <h1> <%= oi %> </h1>
+                            ---
+                        </div>
+        </div>
+    
+
+
+</body>
+</html>
