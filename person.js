@@ -4,7 +4,7 @@ class Person {
     }
 
     say_my_name(){
-        return `my name is ${this.name}`
+        return `myy name is ${this.name}`
     }
 }
 
