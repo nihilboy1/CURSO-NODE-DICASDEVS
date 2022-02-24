@@ -1,5 +1,4 @@
 const express = require("express")
-const res = require("express/lib/response")
 const User_model = require("../src/models/user.model")
 const gate = 8080
 
@@ -7,6 +6,7 @@ const app = express()
 
 app.set("view engine", "ejs") // DECLARA QUE EU QUERO USAR O EJS COMO VIEW ENGINE
 app.set("views", "src/views") // INFORMA O LOCAL ONDE ESTÃO MINHAS VIEWS
+
 app.use(express.json()) // MIDDLEWARE QUE DECLARA QUE TODAS AS MINHAS REQUISIÇÕES SERÃO EM .JSON
 app.use((request, response, next) => {
     console.log(`Request method: ${request.method}`)

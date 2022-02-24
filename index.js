@@ -1,8 +1,10 @@
 
 const dot_env = require("dotenv")
 dot_env.config()
+
 const connect_to_database = require("./src/database/connect")
 connect_to_database()
+
 require("./modules/express.js")
 
 
